@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {incrementCounter,decrementCounter} from '../actions'
+import counterReducer from '../reducers/counterReducer'
 
 
 
@@ -37,7 +38,9 @@ class App extends Component {
 };
 
 function mapStateToProps(state){
-    counter:counter
+    return {
+      counter:state.counter
+     } 
 }
 
 export default connect(mapStateToProps,{incrementCounter,decrementCounter})(App)

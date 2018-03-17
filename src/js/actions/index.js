@@ -5,6 +5,7 @@ export function incrementCounter() {
 		type:add_one,
 		payload:1
 	}
+}
 export function decrementCounter() {
 	return {
 		type:subtract_one,
